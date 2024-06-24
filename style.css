@@ -1,0 +1,373 @@
+*
+{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior:smooth;
+}
+
+html
+{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body
+{
+    background-color: #000000;
+}
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2rem 10% 2rem;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo
+{
+    position:fixed;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+    border: 2px solid #FFA500;
+}
+
+.navbar {
+    right: 0;
+    list-style: none;
+    padding-left: 500;
+    margin-left: 825px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar a
+{
+    right: 0;
+    display:inline-table;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 300;
+    position:static;
+    transition: 0.3s;
+}
+
+.navbar a:hover
+{
+    color: #3023f1;
+    transform: translateY(-3px);
+    transform: scale(1.3); /* Increase size on hover */
+    transition-duration: 0.5s; /* Smooth transition */
+}
+
+#menu-icon
+{
+    font-size: 3rem;
+    color: #005AFF;
+    display: none;
+}
+
+.home
+{
+    position:relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        #000000 5%,
+        #000000 60%,
+        #FFA500 60%,
+        #FFA500 95%
+    );
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    padding-top: 100px;
+}
+
+.home-content
+{
+    max-width: 600px;
+    align-items: baseline;
+    justify-content: center;
+    color: #F8F8FF;
+}
+
+.home-content h1
+{
+    font-size: 56px;
+    font-weight: 600;
+    margin-left: 50px 0;
+    color: #F8F8FF;
+}
+
+.home-content h3
+{
+    font-size: 32px;
+    font-weight: 700;
+    color: #F8F8FF;
+}
+
+span
+{
+    color: #FFFFFF;
+}
+
+.social-icons
+{
+    margin-left: 85px;
+}
+
+.social-icons a
+{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: #FFA500;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover
+{
+    color: #FFFFFF;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px #FFA500;
+    background-color: #FFA500;
+}
+
+.btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #FFA500;
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    color: #000000;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #FFA500;
+}
+
+.btn-group
+{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.image-me1 img
+{
+    margin-top: -50px;
+    margin-right: 140px;
+    box-shadow: 0px 0px 20px #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 300px;
+}
+
+.text-animation span
+{
+    position: relative;
+}
+
+.text-animation span::before
+{
+    content: "Back-End Developer";
+    color: #FFA500;
+    animation: words 20s infinite;
+}
+
+.text-animation span::after
+{
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    width: calc(90% + 8px);
+    height: 100%;
+    border-left: 3px solid #000000;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor 
+{
+    to{
+        border-left: 2px solid #FFA500;
+    }
+}
+
+@keyframes words
+{
+    0%,
+    20%{
+        content: "Engineer";
+    }
+    21%,
+    40%{
+        content: "Back-end Developer";
+    }
+    41%,
+    60%{
+        content: "Computer Technician";
+    }
+    61%,
+    80%{
+        content: "Student";
+    }
+    81%,
+    100%{
+        content: "Gamer";
+    }
+}
+
+@keyframes typing
+{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%
+    {
+        width: 0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%
+    {
+        width: calc(97% + 8px);
+    }
+}
+
+/* Styles for the left and right halves of the about section */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.about-me {
+    padding-top: 100px;
+    margin-bottom: 10px;
+    text-align: center; /* Center the text */
+    color: #FFA500;
+    font-size: 35px;
+    font-weight: 800;
+    text-shadow: 0px 0px 5px #000000;
+    text-rendering: geometricPrecision;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%; /* Adjust as needed */
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.content :hover
+{
+    transform: scale(1.03
+    );
+}
+
+.left-half,
+.right-half {
+    width: 48%; /* Adjust as needed */
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #FFFFFF;
+    border: 1px solid #FFFFFF;
+
+}
+
+.left-half {
+    font-size: 15px;
+    background-color: #000000;
+    padding-right: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.right-half
+{
+    color: #FFFFFF;
+    padding-right: 10px;
+    padding-left: 10px;
+    word-spacing: 3px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: oblique;
+}
+
+/* Styles for individual sections within the left-half */
+.name,
+.role,
+.experience,
+.address,
+.profile,
+.language,
+.interest
+{
+    margin-bottom: 15px; /* Add spacing between sections */
+    color: #F8F8FF;
+    font-size: 20px;
+    font-weight:300;
+    font-style: oblique;
+}
+
+/* Additional styling for headings */
+.name
+{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.right-half h2 {
+    color: #FFA500;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: oblique;
+}
+
+.heading
+{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
